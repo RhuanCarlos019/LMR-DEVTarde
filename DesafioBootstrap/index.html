@@ -159,6 +159,34 @@
       </div>
   </section>
   <hr>
+  <script>
+    // Script JavaScript personalizado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Manipulação de eventos ou outras ações
+  
+      // Exemplo de manipulação de evento de clique em um botão
+      var button = document.querySelector('.btn-outline-primary');
+      button.addEventListener('click', function() {
+        alert('Parabéns, você agora é um membro LangStreet');
+      });
+  
+      // Exemplo de manipulação de evento de envio de formulário
+      var form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+  
+        // Obter valores dos campos de entrada
+        var email = document.querySelector('input[type="email"]').value;
+        var senha = document.querySelector('input[type="password"]').value;
+        var captcha = document.querySelector('input[type="text"]').value;
+  
+        // Realizar ações com os valores obtidos
+        console.log('Email:', email);
+        console.log('Senha:', senha);
+        console.log('Captcha:', captcha);
+      });
+    });
+  </script>
   <section>
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

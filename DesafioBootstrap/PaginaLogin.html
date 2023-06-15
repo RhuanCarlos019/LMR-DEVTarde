@@ -49,28 +49,91 @@
         </nav>
       </header>
       <hr>
+
+      <style>
+        body {
+          background: white;
+          color: rgb(0, 0, 0);
+        }
+    
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          text-align: center;
+        }
+    
+        .login-form {
+          max-width: 300px;
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 10px;
+        }
+    
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: none;
+          background-color: rgba(255, 255, 255, 0.3);
+          color: white;
+          border-radius: 5px;
+        }
+    
+        .login-form button {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          background-color: #ffffff;
+          color: #000000;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    
+        .message {
+          margin-top: 20px;
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    
+    <body>
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira seu e-mail">
-                <div id="emailHelp" class="form-text">Não compartilhe seu e-mail e senha com NINGUÉM!</div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira sua senha">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Lembrar minha senha</label>
-              </div>
-              <button type="submit" class="btn btn-primary">ENTRAR</button>
-            </form>
-          </div>
-        </div>
+        <h1>Página de Login</h1>
+        <form class="login-form">
+          <input type="text" placeholder="Email">
+          <input type="password" placeholder="Senha">
+          <button type="submit">Entrar</button>
+        </form>
+        <div class="message" id="loginMessage"></div>
       </div>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var form = document.querySelector('.login-form');
+          var message = document.getElementById('loginMessage');
+    
+          form.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            var email = form.querySelector('input[type="text"]').value;
+            var password = form.querySelector('input[type="password"]').value;
+    
+            // Aqui você pode adicionar sua lógica de autenticação e verificação de login
+    
+            // Exemplo de autenticação simples
+            if (email === 'usuario@example.com' && password === 'senha123') {
+              message.textContent = 'Login efetuado: ' + email;
+            } else {
+              message.textContent = 'Credenciais inválidas';
+            }
+          });
+        });
+      </script>
+      
       <section>
         <div class="container">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
