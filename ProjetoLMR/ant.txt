@@ -1,1 +1,16 @@
 Carousel 1200 x 642 
+
+Primeiro passo:
+Criar uma página inicial com header, footer, cards e carousel. (feito)
+
+Segundo passo:
+Criar uma página com as datas de show, podendo ser em carousel ou em texto explicativo.
+
+Terceiro passo:
+Criar uma página de contratação de um artista, e dar funcionalidade a ela. (feito)
+
+Quarto passo:
+Criar a página de formulário para o contratante , pedindo dados como: (Nome, e-mail, cnpj, local, instagram e cep).
+
+Quinto passo: 
+Após o mesmo clicar em "Enviar", aparecerá uma tela redirecionada a ele dizendo "Muito obrigado pela escolha, te retornaremos via e-mail".
